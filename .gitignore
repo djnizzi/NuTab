@@ -50,3 +50,5 @@ app/uploads/*
 !app/uploads/.keep
 public/uploads/*
 !public/uploads/.keep
+
+Thumbs.db

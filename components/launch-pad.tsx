@@ -7,6 +7,7 @@ import { SiteIcon } from "./site-icon"
 import { AddSiteDialog } from "./add-site-dialog"
 import { EditSiteDialog } from "./edit-site-dialog"
 import { Plus } from "lucide-react"
+import Image from "next/image"
 
 interface Site {
   id: string
@@ -129,8 +130,14 @@ export function LaunchPad() {
     <div className="flex min-h-screen flex-col items-center justify-center p-8">
       {/* Header */}
       <div className="mb-12 text-center">
-        <h1 className="mb-2 text-4xl font-heading tracking-tight text-foreground md:text-5xl">NuTab</h1>
-        <p className="text-muted-foreground">a NiZ creation</p>
+        
+<Image
+  src="/svg/nutab-logo.svg"
+  alt="nu+ab"
+  width={100}
+
+/>
+        
       </div>
 
       {/* Grid */}

@@ -1,0 +1,13 @@
+<svg width="510" height="350" viewBox="0 0 510 350" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#ffffff" stroke="none" stroke-width="0">
+    <path d="M 122 10 L 160 10 L 160 10 L 160 308 A 32 32 0 0 1 128 340 L 90 340 L 90 340 L 90 42 A 32 32 0 0 1 122 10 Z" />
+    <path d="M 160 10 L 350 10 L 350 10 L 350 80 L 350 80 L 160 80 L 160 80 L 160 10 L 160 10 Z" />
+    <path d="M 350 10 L 388 10 A 32 32 0 0 1 420 42 L 420 340 L 420 340 L 382 340 A 32 32 0 0 1 350 308 L 350 10 L 350 10 Z" />
+    <path d="M 42 270 L 90 270 L 90 270 L 90 340 L 90 340 L 42 340 A 32 32 0 0 1 10 308 L 10 302 A 32 32 0 0 1 42 270 Z" />
+    <path d="M 420 270 L 468 270 A 32 32 0 0 1 500 302 L 500 308 A 32 32 0 0 1 468 340 L 420 340 L 420 340 L 420 270 L 420 270 Z" />
+    <path d="M 0 0 C 0 -23.872 5.76 -32 32 -32 H 0 Z" transform="translate(160, 112)" />
+    <path d="M 0 0 C 0 23.872 -5.76 32 -32 32 H 0 Z" transform="translate(90, 238)" />
+    <path d="M 0 0 C 0 -23.872 -5.76 -32 -32 -32 H 0 Z" transform="translate(350, 112)" />
+    <path d="M 0 0 C 0 23.872 5.76 32 32 32 H 0 Z" transform="translate(420, 238)" />
+  </g>
+</svg>

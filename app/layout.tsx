@@ -5,20 +5,14 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { BackgroundRotator } from "@/components/background-rotator"
 
-const nizBook = localFont({
-  src: "../public/fonts/NiZ2024Book.woff2",
+const fredoka = localFont({
+  src: "../public/fonts/Fredoka-Light.woff2",
   variable: "--font-sans",
   weight: "400",
 })
 
-const nizBlack = localFont({
-  src: "../public/fonts/NiZ2024Black.woff2",
-  variable: "--font-heading",
-  weight: "900",
-})
-
 export const metadata: Metadata = {
-  title: "NuTab",
+  title: "nu+ab",
   description: "a NiZ creation",
   generator: 'v0.app'
 }
@@ -34,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nizBook.variable} ${nizBlack.variable} font-sans antialiased`}>
+      <body className={`${fredoka.variable} font-sans antialiased`}>
         <BackgroundRotator />
         {children}
         <Analytics />
