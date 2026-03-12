@@ -59,9 +59,9 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "group relative flex h-[120px] w-[120px] cursor-grab flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card/25 backdrop-blur-sm p-3 transition-all duration-300 active:cursor-grabbing",
+        "group relative flex h-[100px] w-[100px] cursor-grab flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card/12 backdrop-blur-sm p-3 transition-all duration-300 active:cursor-grabbing",
         isDragging && "scale-105 opacity-50 ring-2 ring-accent",
-        !isDragging && "hover:border-accent/50 hover:bg-card/20 hover:backdrop-blur-none hover:shadow-lg hover:shadow-accent/5",
+        !isDragging && "hover:border-accent/50 hover:bg-card/8 hover:backdrop-blur-none hover:shadow-lg hover:shadow-accent/5",
       )}
     >
       {/* Action Menu */}
@@ -73,7 +73,7 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
       >
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="flex h-7 w-7 items-center justify-center rounded-lg bg-secondary/0 text-muted-foreground backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground">
+            <button className="flex h-7 w-7 items-center justify-center rounded-lg text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground">
               <MoreVertical className="h-4 w-4" />
             </button>
           </DropdownMenuTrigger>
@@ -98,7 +98,7 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
       {/* Icon */}
       <button
         onClick={handleLaunch}
-        className="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-500/40 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/50 overflow-hidden"
+        className="flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/80 hover:cutsor-pointer overflow-hidden"
       >
         {displayIcon && !imageError ? (
           <img

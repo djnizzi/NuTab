@@ -134,14 +134,16 @@ export function LaunchPad() {
 <Image
   src="/svg/nutab-logo.svg"
   alt="nu+ab"
-  width={100}
+  width={160}
+  height={160}
+  className="mx-auto"
 
 />
         
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
         {sites.map((site) => (
           <SiteIcon
             key={site.id}
@@ -158,9 +160,9 @@ export function LaunchPad() {
         {/* Add Button */}
         <button
           onClick={() => setAddDialogOpen(true)}
-          className="group flex h-[120px] w-[120px] flex-col items-center justify-center gap-2 rounded-2xl border-1 border-dashed border-border bg-transparent transition-all duration-300 hover:border-accent hover:bg-secondary/50"
+          className="group flex h-[100px] w-[100px] flex-col items-center justify-center gap-2 rounded-2xl border-1 border-dashed border-border bg-transparent transition-all duration-300 hover:border-accent hover:bg-secondary/50"
         >
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary transition-all duration-300 group-hover:bg-accent group-hover:scale-110">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary transition-all duration-300 group-hover:bg-accent group-hover:scale-110">
             <Plus className="h-6 w-6 text-muted-foreground transition-colors duration-300 group-hover:text-accent-foreground" />
           </div>
           <span className="text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
