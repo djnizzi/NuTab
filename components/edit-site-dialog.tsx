@@ -61,7 +61,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="border-border bg-card sm:max-w-md">
+      <DialogContent className="border-border bg-background/50 backdrop-blur-sm sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-foreground">Edit Site</DialogTitle>
         </DialogHeader>
@@ -75,7 +75,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
               placeholder="GitHub"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="border-border bg-secondary text-foreground placeholder:text-muted-foreground"
+              className="border-border bg-card/5 text-foreground placeholder:text-muted-foreground"
             />
           </div>
           <div className="space-y-2">
@@ -87,7 +87,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
               placeholder="https://github.com"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              className="border-border bg-secondary text-foreground placeholder:text-muted-foreground"
+              className="border-border bg-card/5 text-foreground placeholder:text-muted-foreground"
             />
           </div>
           <div className="space-y-2">
@@ -99,7 +99,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
               type="file"
               accept=".svg,.png,.jpg,.jpeg,.ico"
               onChange={handleFileChange}
-              className="border-border bg-secondary text-foreground file:text-foreground hover:file:bg-accent/10"
+              className="border-border bg-card/5 text-foreground file:text-foreground hover:file:bg-accent/10"
             />
           </div>
           <DialogFooter>
@@ -111,7 +111,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
             >
               Cancel
             </Button>
-            <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90" disabled={loading}>
+            <Button type="submit" style={{ background: 'linear-gradient(to bottom right, rgba(250, 208, 5, 0.7), rgba(255, 107, 51, 0.7), rgba(168, 53, 185, 0.7))' }} className="text-white hover:opacity-90" disabled={loading}>
               {loading ? "Saving..." : "Save Changes"}
             </Button>
           </DialogFooter>

@@ -23,6 +23,7 @@ ENV DATABASE_URL=${DATABASE_URL}
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+ARG CACHEBUST=1
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 # Remove Synology metadata folders that confuse Next.js

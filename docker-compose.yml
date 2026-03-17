@@ -14,3 +14,23 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     volumes:
       - /volume1/Documents/NuTab/public/uploads:/app/uploads
+  nutab-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+
+    ports:
+      - "3001:3000"
+      - "9229:9229"
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /volume1/Documents/NuTab/public/uploads:/app/uploads
+
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+
+    command: sh -c "find . -name '@eaDir' -type d -prune -exec rm -rf {} + && npm install --silent && npx prisma generate && npm run dev"
+    

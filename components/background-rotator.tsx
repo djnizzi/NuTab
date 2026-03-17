@@ -33,8 +33,8 @@ export function BackgroundRotator() {
                 backgroundImage: `url(${bgImage})`,
             }}
         >
-            {/* Overlay to ensure text readability */}
-            <div className="absolute inset-0 bg-background/0 backdrop-blur-[0px]" />
+            {/* Overlay gradient to ensure text readability */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#fad005]/20 via-[#ff6b33]/20 to-[#a835b9]/20 backdrop-blur-[0px]" />
         </div>
     )
 }

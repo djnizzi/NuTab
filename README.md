@@ -1,5 +1,7 @@
 # nu+ab
 
+![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)
+
 nu+ab is a dashboard web application built with Next.js. It features a modern, responsive UI and uses Prisma for database management. The application is containerized using Docker for easy deployment.
 
 ## Features

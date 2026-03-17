@@ -24,6 +24,17 @@ export function LaunchPad() {
   const [addDialogOpen, setAddDialogOpen] = useState(false)
   const [editDialogOpen, setEditDialogOpen] = useState(false)
   const [editingSite, setEditingSite] = useState<Site | null>(null)
+  const [currentTime, setCurrentTime] = useState<string>("")
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date()
+      setCurrentTime(now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false }))
+    }
+    updateTime()
+    const interval = setInterval(updateTime, 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   const fetchSites = useCallback(async () => {
     try {
@@ -129,17 +140,17 @@ export function LaunchPad() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-8">
       {/* Header */}
-      <div className="mb-12 text-center">
-        
-<Image
-  src="/svg/nutab-logo.svg"
-  alt="nu+ab"
-  width={160}
-  height={160}
-  className="mx-auto"
-
-/>
-        
+      <div className="mb-12 flex items-start justify-between w-1/2">
+        <Image
+          src="/svg/nutab-logo.svg"
+          alt="nu+ab"
+          width={160}
+          height={160}
+          loading="eager"
+        />
+        <div className="text-4xl font-light rounded-lg px-2 py-1 bg-linear-to-br from-[#fad005]/60 via-[#ff6b33]/60 to-[#a835b9]/60 text-foreground tabular-nums tracking-wider">
+          {currentTime}
+        </div>
       </div>
 
       {/* Grid */}
@@ -157,12 +168,14 @@ export function LaunchPad() {
           />
         ))}
 
+
+
         {/* Add Button */}
         <button
           onClick={() => setAddDialogOpen(true)}
-          className="group flex h-[100px] w-[100px] flex-col items-center justify-center gap-2 rounded-2xl border-1 border-dashed border-border bg-transparent transition-all duration-300 hover:border-accent hover:bg-secondary/50"
+          className="group flex h-[100px] w-[100px] flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-border bg-transparent transition-all duration-300 hover:shadow-lg hover:scale-110 hover:shadow-amber-500/40 hover:border-amber-500 hover:bg-background/10 backdrop-blur-xs"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary transition-all duration-300 group-hover:bg-accent group-hover:scale-110">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary transition-all duration-300 group-hover:bg-linear-to-br from-[#fad005]/80 via-[#ff6b33]/80 to-[#a835b9]/80 group-hover:scale-110">
             <Plus className="h-6 w-6 text-muted-foreground transition-colors duration-300 group-hover:text-accent-foreground" />
           </div>
           <span className="text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
