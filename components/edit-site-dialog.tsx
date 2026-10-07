@@ -111,7 +111,7 @@ export function EditSiteDialog({ open, onOpenChange, site, onSave }: EditSiteDia
             >
               Cancel
             </Button>
-            <Button type="submit" style={{ background: 'linear-gradient(to bottom right, rgba(250, 208, 5, 0.7), rgba(255, 107, 51, 0.7), rgba(168, 53, 185, 0.7))' }} className="text-white hover:opacity-90" disabled={loading}>
+            <Button type="submit" style={{ background: 'linear-gradient(to bottom right, rgba(250, 208, 5, 1), rgba(255, 107, 51, 1), rgba(168, 53, 185, 1))' }} className="text-black opacity-90 hover:opacity-100 hover:shadow-md hover:shadow-amber-500/40" disabled={loading}>
               {loading ? "Saving..." : "Save Changes"}
             </Button>
           </DialogFooter>

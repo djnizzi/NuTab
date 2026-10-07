@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
             // Handle file upload
             const buffer = Buffer.from(await iconFile.arrayBuffer());
             // Ensure upload directory exists
-            const uploadDir = path.join(process.cwd(), "uploads");
+            const uploadDir = path.join(process.cwd(), "public", "uploads");
             await mkdir(uploadDir, { recursive: true });
 
             const filename = `${Date.now()}-${iconFile.name.replace(/[^a-zA-Z0-9.-]/g, "")}`;

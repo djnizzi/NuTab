@@ -85,7 +85,9 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
               style={{ background: 'transparent' }}
               onMouseEnter={(e) => { 
                 e.currentTarget.style.background = 'linear-gradient(to right, rgba(250, 208, 5, 0.7), rgba(255, 107, 51, 0.7), rgba(168, 53, 185, 0.7))'; 
-
+                e.currentTarget.style.color = 'black';
+                const svg = e.currentTarget.querySelector('svg');
+                if (svg) svg.style.color = 'black';
               }}
               onMouseLeave={(e) => { 
                 e.currentTarget.style.background = 'transparent'; 
@@ -120,7 +122,7 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
             <DropdownMenuSeparator />
             <DropdownMenuItem 
               onClick={() => onDelete(site.id)} 
-              className="text-destructive focus:text-destructive transition-colors duration-200"
+              className="text-red-400 focus:text-red-400 transition-colors duration-200"
               style={{ background: 'transparent' }}
               onMouseEnter={(e) => { 
                 e.currentTarget.style.background = 'linear-gradient(to right, rgba(250, 208, 5, 0.7), rgba(255, 107, 51, 0.7), rgba(168, 53, 185, 0.7))'; 
@@ -135,7 +137,7 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
                 if (svg) svg.style.color = '';
               }}
             >
-              <Trash2 className="mr-2 h-4 w-4" />
+              <Trash2 className="mr-2 h-4 w-4 text-red-400" />
               Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -160,7 +162,7 @@ export function SiteIcon({ site, isDragging, onDragStart, onDragOver, onDragEnd,
       </button>
 
       {/* Label */}
-      <span className="max-w-full truncate text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+      <span className="max-w-full truncate text-xs font-medium text-foreground/90 transition-colors duration-300 group-hover:text-foreground">
         {site.name}
       </span>
 

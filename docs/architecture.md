@@ -22,5 +22,5 @@
 
 ## Database
 
-The project uses Prisma to interact with a MySQL database. The schema is defined in `prisma/schema.prisma` (assumed based on `prisma` folder presence).
+The project uses Prisma to interact with a PostgreSQL database. The schema is defined in `prisma/schema.prisma` (assumed based on `prisma` folder presence).
 Basic operations are handled via Prisma Client.

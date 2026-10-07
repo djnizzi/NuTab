@@ -140,7 +140,7 @@ export function LaunchPad() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-8">
       {/* Header */}
-      <div className="mb-12 flex items-start justify-between w-1/2">
+      <div className="mb-12 flex items-start justify-between w-[320px] sm:w-[442px] md:w-[672px] lg:w-[906px]">
         <Image
           src="/svg/nutab-logo.svg"
           alt="nu+ab"
@@ -148,7 +148,7 @@ export function LaunchPad() {
           height={160}
           loading="eager"
         />
-        <div className="text-4xl font-light rounded-lg px-2 py-1 bg-linear-to-br from-[#fad005]/60 via-[#ff6b33]/60 to-[#a835b9]/60 text-foreground tabular-nums tracking-wider">
+        <div className="text-4xl font-light text-shadow-sm text-shadow-amber-500/40 text-transparent bg-clip-text bg-linear-to-br from-[#fad005]/60 via-[#ff6b33]/60 to-[#a835b9]/60 tabular-nums tracking-wider">
           {currentTime}
         </div>
       </div>
@@ -178,8 +178,8 @@ export function LaunchPad() {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary transition-all duration-300 group-hover:bg-linear-to-br from-[#fad005]/80 via-[#ff6b33]/80 to-[#a835b9]/80 group-hover:scale-110">
             <Plus className="h-6 w-6 text-muted-foreground transition-colors duration-300 group-hover:text-accent-foreground" />
           </div>
-          <span className="text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
-            Add Site
+          <span className="text-xs font-medium text-foreground/90 transition-colors duration-300 group-hover:text-foreground">
+            add si+e
           </span>
         </button>
       </div>

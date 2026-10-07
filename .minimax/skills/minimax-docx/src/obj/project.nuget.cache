@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LYL5ElCbWOexyM/ihe4dNWtSxdNEaaIoSQqcptgdyUO51/JmSJp3u1j+V/HnsUqlS4CuXDmZgut62rVRm79QQg==",
+  "success": true,
+  "projectFilePath": "O:\\NuTab\\.minimax\\skills\\minimax-docx\\src\\DocForge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\djniz\\.nuget\\packages\\documentformat.openxml\\3.1.0\\documentformat.openxml.3.1.0.nupkg.sha512",
+    "C:\\Users\\djniz\\.nuget\\packages\\documentformat.openxml.framework\\3.1.0\\documentformat.openxml.framework.3.1.0.nupkg.sha512",
+    "C:\\Users\\djniz\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

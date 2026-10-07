@@ -6,7 +6,7 @@ This guide covers the installation and setup for the NuTab project.
 
 - **Node.js**: Version 20 or higher.
 - **Docker**: For running the containerized application.
-- **MySQL**: (Or compatible database) as defined in the `DATABASE_URL`.
+- **PostgreSQL**: (Or compatible database) as defined in the `DATABASE_URL`.
 
 ## Local Development
 
@@ -22,7 +22,7 @@ This guide covers the installation and setup for the NuTab project.
 2.  **Environment Variables**
     Create a `.env` file in the root directory and configure your database connection:
     ```env
-    DATABASE_URL="mysql://user:password@host:port/database"
+    DATABASE_URL="postgresql://user:password@host:port/database?schema=nutab"
     ```
 
 3.  **Run Development Server**

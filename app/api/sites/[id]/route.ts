@@ -31,7 +31,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
         if (iconFile && iconFile.size > 0) {
             // Handle file upload
             const buffer = Buffer.from(await iconFile.arrayBuffer());
-            const uploadDir = path.join(process.cwd(), "uploads");
+            const uploadDir = path.join(process.cwd(), "public", "uploads");
             const filename = `${Date.now()}-${iconFile.name.replace(/[^a-zA-Z0-9.-]/g, "")}`;
             const filepath = path.join(uploadDir, filename);
             await mkdir(uploadDir, { recursive: true });
@@ -42,7 +42,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
             // Delete old local file if it exists and was an upload
             if (existingSite.icon && existingSite.icon.startsWith("/uploads/")) {
                 try {
-                    const oldPath = path.join(process.cwd(), "uploads", existingSite.icon.replace("/uploads/", ""));
+                    const oldPath = path.join(process.cwd(), "public", "uploads", existingSite.icon.replace("/uploads/", ""));
                     await unlink(oldPath);
                 } catch (e) {
                     console.warn("Failed to delete old icon:", e);
@@ -85,7 +85,7 @@ export async function DELETE(req: NextRequest, { params }: { params: Promise<{ i
         // Delete icon file if local
         if (site.icon && site.icon.startsWith("/uploads/")) {
             try {
-                const oldPath = path.join(process.cwd(), "uploads", site.icon.replace("/uploads/", ""));
+                const oldPath = path.join(process.cwd(), "public", "uploads", site.icon.replace("/uploads/", ""));
                 await unlink(oldPath);
             } catch (e) {
                 console.warn("Failed to delete icon file:", e);

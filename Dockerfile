@@ -62,7 +62,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # Ensure upload directory exists and is writable
-RUN mkdir -p /app/uploads && chown -R nextjs:nodejs /app/uploads
+RUN mkdir -p /app/public/uploads && chown -R nextjs:nodejs /app/public/uploads
 RUN chmod -R 755 ./public
 
 # Fix permissions for all application files (definitive fix)
